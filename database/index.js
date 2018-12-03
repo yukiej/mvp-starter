@@ -23,3 +23,15 @@ var itemSchema = mongoose.Schema({
 
 var Item = mongoose.model('Item', itemSchema);
 
+var findSubs = function(ingredient, callback) {
+  Item.find({ 'name' : ingredient }, function(err, items) {
+    if (err) {
+      callback(err, null);
+    } else {
+      console.log('successful query!')
+      callback(null, items);
+    }
+  });
+}
+
+module.exports.findSubs = findSubs;

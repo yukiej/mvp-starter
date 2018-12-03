@@ -2,7 +2,7 @@ import React from 'react';
 
 const SubItem = (props) => (
   <div>
-    `${props.amount} ${props.unit} ${props.name}`
+    {props.item.amount + ' ' + props.item.unit + ' ' +  props.item.name}
   </div>
 )
 
