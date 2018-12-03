@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Substitute ingredient finder
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Lazy or busy cooks can get ideas for substituting ingredients for a recipe they want to use
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Have you ever had a recipe you want to use but don't have all the ingredients? Use the substitute ingredient finder chrome extension to instantly see ideas for ingredient substitutions so you don't have to go buy that pint of buttermilk at the store. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Most recipes only show one possible permutation of a recipe. By combining existing recipes with suggested ingredient substitutions, users can have multiple versions of a recipe, right at their fingertips. 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Once a user finds a recipe they like, the chrome extension annotates the recipe with suggested ingredient substitutions so they can personalize the recipe instantly. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Have you ever had a recipe you want to use but don't have all the ingredients? Use the substitute ingredient finder chrome extension to instantly see ideas for ingredient substitutions so you don't have to go buy that pint of buttermilk at the store. 
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just add the chrome extension, and anytime you have the recipe open, you can click on the button and see all the substitutions in one place!
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I always use the substitute ingredient finder when I'm cooking - it saves me so much time! I also love that it helps me use up what I have already in the kitchen, instead of having to go hunt down some random ingredient I will use once a year."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Try out the substitute ingredient finder to simplify your meal planning at the click of a button!
