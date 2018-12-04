@@ -31,4 +31,29 @@
      "unit": "tbsp",
    }
  ] 
+
+ 
+ {
+  "name": "buttermilk",
+  "unit": "cup",
+  "amount": 1,
+  "subs":[
+    {
+      "name": "plain yogurt",
+      "amount": 1,
+      "unit": "cup"
+    },
+    {
+      "name": "milk and lemon juice or vinegar",
+      "amount": 1,
+      "unit": "cup",
+      "directions": "1 cup milk plus 1 tbsp. lemon juice or vinegar"
+    },
+    {
+      "name": "milk and cream of tartar",
+      "amount": 1,
+      "unit": "cup",
+      "directions": "1 cup milk plus 1 3/4 tsp. cream of tartar"
+    }
+  ] 
 }
