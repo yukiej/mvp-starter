@@ -8,6 +8,8 @@ class App extends React.Component {
     this.state = { 
       step: 0,
       value: '',
+      amount: '',
+      ingredient: '',
       items: [
         ] 
     }
@@ -29,10 +31,11 @@ class App extends React.Component {
       .then((res) => 
         res.json())
       .then((jsonData) => {
-        let subs = jsonData.subs;
         this.setState({
           step: 1,
-          items: subs
+          items: jsonData.subs,
+          amount: '1 ' + jsonData.unit,
+          ingredient: jsonData.name
         });
       })
       .catch(() => {
@@ -70,6 +73,7 @@ class App extends React.Component {
             </form>
           </div>
           <div>
+            <h4>{this.state.amount + ' ' + this.state.ingredient + " = "}</h4>
             <SubList items={this.state.items}/>
           </div>
         </div>
