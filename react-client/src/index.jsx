@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import $ from 'jquery';
 import SubList from './components/SubList.jsx';
-// import Finder from './components/Finder.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,41 +8,35 @@ class App extends React.Component {
     this.state = { 
       step: 0,
       value: '',
-      items: [] 
+      items: [
+        ] 
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: '/items', 
-  //     success: (data) => {
-  //       this.setState({
-  //         items: data
-  //       })
-  //     },
-  //     error: (err) => {
-  //       console.log('err', err);
-  //     }
-  //   });
-  // }
 
   handleChange(event) {
     this.setState({value: event.target.value});
   }
 
   handleSubmit(event) {
-    // console.log('Searched for substitutes for ', this.state.value);
-    fetch(`/api/ingredients/${this.state.value}`)
-      .then((res) => res.json())
-        //do something with response
+    fetch(`http://localhost:3003/api/ingredients/${this.state.value}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "text/plain"
+      }
+    })
+      .then((res) => 
+        res.json())
       .then((jsonData) => {
         let subs = jsonData.subs;
         this.setState({
           step: 1,
           items: subs
         });
+      })
+      .catch(() => {
+        console.log("Something went wrong...?")
       })
     
     event.preventDefault();
@@ -62,13 +54,24 @@ class App extends React.Component {
           <input type="submit" value="Submit"/>
         </form>
       </div>)
-    } else if (this.state.step === 1) {
+    } else if (this.state.step === 1 && this.state.items.length !== 0) {
       return (
         <div>
-        <SubList items={this.state.items}/>
-      </div>)
-    }
-    
+            <div>
+            <form onSubmit={this.handleSubmit}>
+              <label>
+                <p>Find substitutes for: </p>
+                <input type="text" value={this.value} onChange={this.handleChange} name="ingredient" />
+              </label>
+              <input type="submit" value="Submit"/>
+            </form>
+          </div>
+          <div>
+            <SubList items={this.state.items}/>
+          </div>
+        </div>
+        )
+    } 
   }
 }
 
