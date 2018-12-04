@@ -36,7 +36,10 @@ class App extends React.Component {
         });
       })
       .catch(() => {
-        console.log("Something went wrong...?")
+        this.setState({
+          step: 0,
+          items: []
+        })
       })
     
     event.preventDefault();
@@ -48,7 +51,7 @@ class App extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Find substitutes for: 
+            <h3> Find substitutes for: </h3>
             <input type="text" value={this.value} onChange={this.handleChange} name="ingredient" />
           </label>
           <input type="submit" value="Submit"/>
@@ -60,7 +63,7 @@ class App extends React.Component {
             <div>
             <form onSubmit={this.handleSubmit}>
               <label>
-                <p>Find substitutes for: </p>
+                <h3> Find substitutes for: </h3>
                 <input type="text" value={this.value} onChange={this.handleChange} name="ingredient" />
               </label>
               <input type="submit" value="Submit"/>

@@ -1,4 +1,6 @@
 body {
   color: #0D47A1;
   font-family: 'Nanum Gothic', sans-serif;
+  font-size: 15px;
+  min-width: 200px;
 }
